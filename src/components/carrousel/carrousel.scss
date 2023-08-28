@@ -1,0 +1,155 @@
+.carrousel {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #000000;
+    overflow: hidden;
+    position: relative;
+
+    .arrow-left,
+    .arrow-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 50px;
+        z-index: 1;
+        opacity: 0.6;
+        cursor: pointer;
+        width: 48px;
+        height: 80px;
+
+        &:hover,
+        &:hover {
+          opacity: 1;
+        }
+    }
+
+    .arrow-left {
+      left: 25px;
+    }
+        
+    .arrow-right {
+      right: 25px;
+    }
+
+    .carrousel__counter {
+      position: absolute;
+      left: 50%;
+      bottom: 25px;
+      color: #fff;
+      font-size: 18px;
+      z-index: 1;
+    }
+    
+    .carrousel__images-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+
+      .carrousel__image {
+        flex: 0 0 100%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 780px) {
+  .carrousel {
+    height: 350px;
+    border-radius: 20px;
+
+    .arrow-left,
+    .arrow-right {
+      display: flex;
+      width: 38px;
+      height: 38px;
+    }
+
+    .arrow-left {
+      left: 20px;
+    }
+  
+    .arrow-right {
+      right: 20px;
+    }
+
+    .carrousel__counter {
+      display: none;
+    }
+
+    .carrousel__images-container{
+      .carrousel__image {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .carrousel {
+    height: 300px;
+    border-radius: 14px;
+
+    .arrow-left,
+    .arrow-right {
+      width: 30px;
+      height: 30px;
+    }
+
+    .arrow-left {
+      left: 15px;
+    }
+  
+    .arrow-right {
+      right: 15px;
+    }
+
+    .carrousel__images-container{
+      .carrousel__image {
+        border-radius: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .carrousel {
+    height: 255px;
+    border-radius: 10px;
+
+    .arrow-left,
+    .arrow-right {
+      width: 24px;
+      height: 24px;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+  
+    .arrow-right {
+      right: 10px;
+    }
+
+    .carrousel__images-container{
+      .carrousel__image {
+        border-radius: 10px;
+      }
+    }
+  }
+}

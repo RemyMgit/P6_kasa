@@ -1,0 +1,35 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #FFF;
+        background-color: #FF6060;
+        border-radius: 10px;
+        margin-right: 10px;
+        padding: 0.8% 6%;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .tag {
+        padding: 0.8% 4%;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .tag {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .tag {
+        font-size: 10px;
+    }
+}
